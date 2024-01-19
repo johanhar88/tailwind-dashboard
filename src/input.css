@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+
+}
+
+@layer components {
+    .btn-navbar {
+        @apply flex mx-1 px-3 py-2 text-xs font-medium text-center text-gray-600 rounded-lg tracking-wider dark:tracking-wider hover:bg-gray-100 focus:ring-2 focus:ring-blue-300 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-700;
+    }
+}
+
+@layer utilities {
+    .btn-navbar-transition {
+        @apply transition delay-0 duration-75 ease-in-out;
+    }
+}
