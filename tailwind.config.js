@@ -1,10 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: 'class',
-  content: ['./src/index.html', "./node_modules/flowbite/**/*.js"],
+  content: ['./src/index.html', './src/index2.html', "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
-      
+      fontFamily: {
+        pop: 'Poppins, sans-serif',
+      }
     },
   },
   plugins: [
