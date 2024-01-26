@@ -1245,10 +1245,6 @@ input:checked + .toggle-bg {
   margin-left: -0.25rem;
 }
 
-.-ms-1 {
-  margin-inline-start: -0.25rem;
-}
-
 .-mt-5 {
   margin-top: -1.25rem;
 }
@@ -2115,6 +2111,11 @@ input:checked + .toggle-bg {
 .text-blue-600 {
   --tw-text-opacity: 1;
   color: rgb(28 100 242 / var(--tw-text-opacity));
+}
+
+.text-blue-700 {
+  --tw-text-opacity: 1;
+  color: rgb(26 86 219 / var(--tw-text-opacity));
 }
 
 .text-cyan-500 {
