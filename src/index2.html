@@ -20,9 +20,13 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 </head>
 
@@ -360,7 +364,7 @@
                                         <div
                                             class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:translate-x-[-100%] peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
                                         </div>
-                                        <span class="ms-3 text-sm text-gray-900 dark:text-gray-300">Dark Mode</span>
+                                        <span class="ms-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dark Mode</span>
                                     </label>
                                 </div>
                             </li>
@@ -371,8 +375,7 @@
                         </ul>
                         <div class="py-2">
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-center text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
-                                out</a>
+                                class="block px-4 py-2 text-sm text-center text-red-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-red-400 dark:hover:text-red-500">Sign out</a>
                         </div>
                     </div>
                 </div>
@@ -444,11 +447,13 @@
                                     d="M500-482q29-32 44.5-73t15.5-85q0-44-15.5-85T500-798q60 8 100 53t40 105q0 60-40 105t-100 53Zm220 322v-120q0-36-16-68.5T662-406q51 18 94.5 46.5T800-280v120h-80Zm80-280v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Zm-480-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM0-160v-112q0-34 17.5-62.5T64-378q62-31 126-46.5T320-440q66 0 130 15.5T576-378q29 15 46.5 43.5T640-272v112H0Zm320-400q33 0 56.5-23.5T400-640q0-33-23.5-56.5T320-720q-33 0-56.5 23.5T240-640q0 33 23.5 56.5T320-560ZM80-240h480v-32q0-11-5.5-20T540-306q-54-27-109-40.5T320-360q-56 0-111 13.5T100-306q-9 5-14.5 14T80-272v32Zm240-400Zm0 400Z" />
                             </svg>
                         </button>
-                        <div id="tooltip-addperson" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-addperson" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                             Add member
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
-                        <div id="tooltip-folder" role="tooltip" class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        <div id="tooltip-folder" role="tooltip"
+                            class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
                             Configure files
                             <div class="tooltip-arrow" data-popper-arrow></div>
                         </div>
@@ -500,35 +505,35 @@
                         <div class="grid grid-cols-2 grid-flow-row dark:text-gray-300">
                             <div class="my-2">
                                 <h1 class="text-xs">Person</h1>
-                                <p class="text-xs font-medium">Hector</p>
+                                <p class="text-xs font-semibold">Hector</p>
                             </div>
                             <div class="my-2">
                                 <h1 class="text-xs">Category</h1>
-                                <p class="text-xs font-medium">Tools</p>
+                                <p class="text-xs font-semibold">Tools</p>
                             </div>
                             <div class="my-2">
                                 <h1 class="text-xs">Company</h1>
-                                <p class="text-xs font-medium">Google</p>
+                                <p class="text-xs font-semibold">Google</p>
                             </div>
                             <div class="my-2">
                                 <h1 class="text-xs">Solution</h1>
-                                <p class="text-xs font-medium">XYZ</p>
+                                <p class="text-xs font-semibold">XYZ</p>
                             </div>
                             <div class="my-2 col-span-2">
                                 <h1 class="text-xs">Department</h1>
-                                <p class="text-xs font-medium">MFG</p>
+                                <p class="text-xs font-semibold">MFG</p>
                             </div>
                             <div class="my-2">
                                 <h1 class="text-xs">AM</h1>
-                                <p class="text-xs font-medium">Super Admin</p>
+                                <p class="text-xs font-semibold">Super Admin</p>
                             </div>
                             <div class="my-2">
-                                <h1 class="text-xs">PM</h1>
-                                <p class="text-xs font-medium">John Doe</p>
+                                <h1 class="text-xs">Lead</h1>
+                                <p class="text-xs font-semibold">John Doe</p>
                             </div>
                             <div class="my-2 col-span-2">
                                 <h1 class="text-xs">Deadline</h1>
-                                <p class="text-xs font-medium">23 February 2024</p>
+                                <p class="text-xs font-semibold">23 February 2024</p>
                             </div>
                         </div>
                     </div>
@@ -584,7 +589,7 @@
                             <div class="text-center mt-2">
                                 <div
                                     class="py-1 rounded-lg text-xs font-semibold tracking-tight bg-gray-100 text-gray-500 hover:bg-gray-200 cursor-pointer">
-                                    View More
+                                    View more
                                 </div>
                             </div>
                         </div>
