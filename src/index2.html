@@ -22,7 +22,9 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Lato:wght@100;300;400;700;900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body class="dark:bg-gray-800">
@@ -57,7 +59,7 @@
                             <a href="#" class="btn-navbar btn-navbar-transition group">Documents</a>
                         </li>
                         <li>
-                            <a href="#"
+                            <a href="index.html"
                                 class="btn-navbar btn-navbar-transition text-cyan-500 dark:bg-gray-700 dark:text-cyan-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Activity</a>
                         </li>
                         <li>
@@ -359,7 +361,9 @@
                                         <div
                                             class="w-9 h-5 bg-gray-200 peer-focus:outline-none peer focus:ring-2 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-600 peer-checked:after:translate-x-full rtl:peer-checked:after:translate-x-[-100%] peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-500 peer-checked:bg-blue-600">
                                         </div>
-                                        <span class="ms-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dark Mode</span>
+                                        <span
+                                            class="ms-3 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dark
+                                            Mode</span>
                                     </label>
                                 </div>
                             </li>
@@ -370,7 +374,8 @@
                         </ul>
                         <div class="py-2">
                             <a href="#"
-                                class="block px-4 py-2 text-sm text-center text-red-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-red-400 dark:hover:text-red-500">Sign out</a>
+                                class="block px-4 py-2 text-sm text-center text-red-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-red-400 dark:hover:text-red-500">Sign
+                                out</a>
                         </div>
                     </div>
                 </div>
@@ -399,7 +404,7 @@
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
                                     stroke-width="2" d="m1 9 4-4-4-4" />
                             </svg>
-                            <a href="#"
+                            <a href="index.html"
                                 class="ms-1 text-xs font-medium text-gray-700 hover:text-blue-600 md:ms-2 dark:text-gray-400 dark:hover:text-white">Activity</a>
                         </div>
                     </li>
@@ -417,8 +422,10 @@
                 </ol>
             </nav>
             <!-- Date Created -->
-            <span class="text-[10px] font-medium text-gray-900 dark:text-gray-400">Created at 22 January 2024 5:02
-                PM</span>
+            <div class="text-end text-[10px] font-medium text-gray-600 dark:text-gray-400">
+                <p>Created at 22 January 2024 5:02 PM</p>
+                <p class="italic">Collab ID 8127391</p>
+            </div>
         </div>
 
         <div class="my-5">
@@ -427,32 +434,85 @@
                 <span
                     class="inline-flex bg-green-100 text-green-800 text-sm font-semibold mx-2 px-2.5 py-1 my-auto rounded dark:bg-green-900 dark:text-green-300">OPEN</span>
                 <div class="ms-auto">
+                    <button type="button" data-tooltip-target="tooltip-changestatus" data-modal-target="popup-modal"
+                        data-modal-toggle="popup-modal"
+                        class="text-white bg-gray-50 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center dark:bg-cyan-900 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
+                        <svg class="w-5 h-5 fill-cyan-600 dark:fill-cyan-400" xmlns="http://www.w3.org/2000/svg"
+                            width="24" height="24" viewBox="0 -960 960 960">
+                            <path
+                                d="M440-82q-76-8-141.5-41.5t-114-87Q136-264 108-333T80-480q0-91 36.5-168T216-780h-96v-80h240v240h-80v-109q-55 44-87.5 108.5T160-480q0 123 80.5 212.5T440-163v81Zm-17-214L254-466l56-56 113 113 227-227 56 57-283 283Zm177 196v-240h80v109q55-45 87.5-109T800-480q0-123-80.5-212.5T520-797v-81q152 15 256 128t104 270q0 91-36.5 168T744-180h96v80H600Z" />
+                        </svg>
+                    </button>
+                    <button type="button" data-tooltip-target="tooltip-account"
+                        class="text-white mx-3 bg-gray-50 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center dark:bg-cyan-900 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
+                        <svg class="w-5 h-5 fill-cyan-600 dark:fill-cyan-400" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 -960 960 960">
+                            <path
+                                d="M400-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM80-160v-112q0-33 17-62t47-44q51-26 115-44t141-18h14q6 0 12 2-8 18-13.5 37.5T404-360h-4q-71 0-127.5 18T180-306q-9 5-14.5 14t-5.5 20v32h252q6 21 16 41.5t22 38.5H80Zm560 40-12-60q-12-5-22.5-10.5T584-204l-58 18-40-68 46-40q-2-14-2-26t2-26l-46-40 40-68 58 18q11-8 21.5-13.5T628-460l12-60h80l12 60q12 5 22.5 11t21.5 15l58-20 40 70-46 40q2 12 2 25t-2 25l46 40-40 68-58-18q-11 8-21.5 13.5T732-180l-12 60h-80Zm40-120q33 0 56.5-23.5T760-320q0-33-23.5-56.5T680-400q-33 0-56.5 23.5T600-320q0 33 23.5 56.5T680-240ZM400-560q33 0 56.5-23.5T480-640q0-33-23.5-56.5T400-720q-33 0-56.5 23.5T320-640q0 33 23.5 56.5T400-560Zm0-80Zm12 400Z" />
+                        </svg>
+                    </button>
                     <button type="button" data-tooltip-target="tooltip-folder"
                         class="text-white bg-gray-50 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center dark:bg-cyan-900 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
                         <svg class="w-5 h-5 fill-cyan-600 dark:fill-cyan-400" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 -960 960 960">
                             <path
-                                d="m680-80-12-60q-12-5-22.5-10.5T624-164l-58 18-40-68 46-40q-2-12-2-26t2-26l-46-40 40-68 58 18q11-8 21.5-13.5T668-420l12-60h80l12 60q12 5 22.5 10.5T816-396l58-18 40 68-46 40q2 12 2 26t-2 26l46 40-40 68-58-18q-11 8-21.5 13.5T772-140l-12 60h-80Zm40-120q33 0 56.5-23.5T800-280q0-33-23.5-56.5T720-360q-33 0-56.5 23.5T640-280q0 33 23.5 56.5T720-200Zm-560-40v-480 172-12 320Zm0 80q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h240l80 80h320q33 0 56.5 23.5T880-640v131q-18-13-38-22.5T800-548v-92H447l-80-80H160v480h283q3 21 9.5 41t15.5 39H160Z" />
+                                d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
                         </svg>
-                        <button type="button" data-tooltip-target="tooltip-addperson"
-                            class="text-white ms-3 bg-gray-50 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center dark:bg-cyan-900 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
-                            <svg class="w-5 h-5 fill-cyan-600 dark:fill-cyan-400" xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 -960 960 960">
-                                <path
-                                    d="M500-482q29-32 44.5-73t15.5-85q0-44-15.5-85T500-798q60 8 100 53t40 105q0 60-40 105t-100 53Zm220 322v-120q0-36-16-68.5T662-406q51 18 94.5 46.5T800-280v120h-80Zm80-280v-80h-80v-80h80v-80h80v80h80v80h-80v80h-80Zm-480-40q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM0-160v-112q0-34 17.5-62.5T64-378q62-31 126-46.5T320-440q66 0 130 15.5T576-378q29 15 46.5 43.5T640-272v112H0Zm320-400q33 0 56.5-23.5T400-640q0-33-23.5-56.5T320-720q-33 0-56.5 23.5T240-640q0 33 23.5 56.5T320-560ZM80-240h480v-32q0-11-5.5-20T540-306q-54-27-109-40.5T320-360q-56 0-111 13.5T100-306q-9 5-14.5 14T80-272v32Zm240-400Zm0 400Z" />
-                            </svg>
-                        </button>
-                        <div id="tooltip-addperson" role="tooltip"
-                            class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                            Add member
-                            <div class="tooltip-arrow" data-popper-arrow></div>
-                        </div>
-                        <div id="tooltip-folder" role="tooltip"
-                            class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                            Configure files
-                            <div class="tooltip-arrow" data-popper-arrow></div>
-                        </div>
                     </button>
+                    <!-- Modal Change Status -->
+                    <div id="popup-modal" tabindex="-1"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-md max-h-full">
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <button type="button"
+                                    class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    data-modal-hide="popup-modal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                                <div class="p-4 md:p-5 text-center">
+                                    <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 20 20">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                            stroke-width="2"
+                                            d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Are you
+                                        sure want to <span class="font-bold">Close</span> this?</h3>
+                                    <button data-modal-hide="popup-modal" type="button"
+                                        class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center me-2">
+                                        Yes, I'm sure
+                                    </button>
+                                    <button data-modal-hide="popup-modal" type="button"
+                                        class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">No,
+                                        cancel</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tooltip -->
+                    <div id="tooltip-changestatus" role="tooltip"
+                        class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Change Status
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <div id="tooltip-folder" role="tooltip"
+                        class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Settings
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <div id="tooltip-account" role="tooltip"
+                        class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        Manage Account
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+
                 </div>
             </div>
             <h6 class="font-medium text-gray-900 dark:text-white">Google</h6>
@@ -481,7 +541,7 @@
             <div class="flex gap-4" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                 <div class="rounded-lg">
                     <!-- Summary -->
-                    <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 ">
+                    <div class="p-4 mb-4 rounded-lg bg-gray-50 dark:bg-gray-700">
                         <div class="flex">
                             <h1 class="text-xs uppercase tracking-wide font-bold mb-2 text-gray-900 dark:text-gray-300">
                                 Summary
@@ -491,6 +551,17 @@
                             adipisicing elit. Labore sint quisquam tempore assumenda atque incidunt, id quos voluptatum
                             illo
                             aliquam non culpa iste error molestias voluptate natus sapiente beatae corporis.</p>
+                    </div>
+                    <!-- Files -->
+                    <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 ">
+                        <div class="flex">
+                            <h1 class="text-xs uppercase tracking-wide font-bold mb-2 text-gray-900 dark:text-gray-300">
+                                Documents & Files
+                            </h1>
+                        </div>
+                        <div class="border bg-gray-900 h-40">
+
+                        </div>
                     </div>
                 </div>
                 <div class="w-72 rounded-lg">
@@ -526,11 +597,11 @@
                             </div>
                             <div class="my-2">
                                 <h1 class="text-xs">Lead</h1>
-                                <p class="text-xs font-semibold">John Doe</p>
+                                <p class="text-xs font-semibold">Shana Cruz</p>
                             </div>
-                            <div class="my-2 col-span-2">
-                                <h1 class="text-xs">Deadline</h1>
-                                <p class="text-xs font-semibold">23 February 2024</p>
+                            <div class="my-2 col-span-2 bg-red-200 text-red-800 dark:bg-red-300 dark:text-red-900 text-center p-1 rounded-lg">
+                                <h1 class="text-xs font-semibold ">Deadline</h1>
+                                <p class="text-xs font-semibold ">23 February 2024</p>
                             </div>
                         </div>
                     </div>
