@@ -1,0 +1,60 @@
+.ck-editor__editable_inline {
+    height: 190px;
+    font-size: 13px;
+    background-color: white !important;
+    border-left-color: rgb(229 231 235) !important;
+    border-right-color: rgb(229 231 235) !important;
+    border-bottom-color: rgb(229 231 235) !important;
+    border-top-color: transparent !important;
+    box-shadow: none !important;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.ck .ck-toolbar {
+    background-color: #F9FAFB !important;
+    border-width: 1px !important;
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+    border-color: rgb(229 231 235) !important;  
+}
+
+
+.dark .ck-editor__editable_inline {
+    height: 190px;
+    font-size: 13px;
+    background-color: #1F2937 !important;
+    border-left-color: rgb(75 85 99) !important;
+    border-right-color: rgb(75 85 99) !important;
+    border-bottom-color: rgb(75 85 99) !important;
+    border-top-color: transparent !important;
+    box-shadow: none !important;
+    color: white;
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+}
+
+.dark .ck .ck-toolbar {
+    background-color: #374151 !important;
+    border-width: 1px !important;
+    border-top-left-radius: 0.5rem !important;
+    border-top-right-radius: 0.5rem !important;
+    border-color: rgb(75 85 99) !important;
+}
+
+.dark .ck{
+    --ck-custom-background: #374151;
+    --ck-custom-foreground: #374151;
+
+    --ck-color-base-foreground: var(--ck-custom-background);
+    --ck-color-focus-border: hsl(208, 90%, 62%);
+    --ck-color-text: hsl(218, 10.6%, 64.9%);
+    --ck-color-shadow-drop: hsla(0, 0%, 0%, 0.2);
+    --ck-color-shadow-inner: hsla(0, 0%, 0%, 0.1);
+
+    --ck-color-button-default-background: var(--ck-custom-background);
+    --ck-color-button-default-hover-background: hsl(215, 13.8%, 34.1%);
+    --ck-color-button-default-active-background: hsl(270, 2%, 20%);
+    --ck-color-button-default-active-shadow: hsl(270, 2%, 23%);
+    --ck-color-button-default-disabled-background: var(--ck-custom-background);
+}
