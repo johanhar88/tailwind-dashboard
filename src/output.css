@@ -1584,6 +1584,10 @@ input:checked + .toggle-bg {
   width: 100%;
 }
 
+.w-44 {
+  width: 11rem;
+}
+
 .max-w-\[326px\] {
   max-width: 326px;
 }
@@ -2185,6 +2189,11 @@ input:checked + .toggle-bg {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.py-3\.5 {
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
 }
 
 .pb-2 {
