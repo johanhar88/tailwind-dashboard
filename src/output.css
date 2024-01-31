@@ -1157,6 +1157,10 @@ input:checked + .toggle-bg {
   bottom: 0px;
 }
 
+.bottom-12 {
+  bottom: 3rem;
+}
+
 .bottom-\[60px\] {
   bottom: 60px;
 }
@@ -1187,6 +1191,10 @@ input:checked + .toggle-bg {
 
 .right-0 {
   right: 0px;
+}
+
+.right-12 {
+  right: 3rem;
 }
 
 .right-14 {
@@ -2057,6 +2065,11 @@ input:checked + .toggle-bg {
 .bg-red-200 {
   --tw-bg-opacity: 1;
   background-color: rgb(251 213 213 / var(--tw-bg-opacity));
+}
+
+.bg-red-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(253 242 242 / var(--tw-bg-opacity));
 }
 
 .bg-red-500 {
