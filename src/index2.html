@@ -452,7 +452,8 @@
                                 d="M440-82q-76-8-141.5-41.5t-114-87Q136-264 108-333T80-480q0-91 36.5-168T216-780h-96v-80h240v240h-80v-109q-55 44-87.5 108.5T160-480q0 123 80.5 212.5T440-163v81Zm-17-214L254-466l56-56 113 113 227-227 56 57-283 283Zm177 196v-240h80v109q55-45 87.5-109T800-480q0-123-80.5-212.5T520-797v-81q152 15 256 128t104 270q0 91-36.5 168T744-180h96v80H600Z" />
                         </svg>
                     </button>
-                    <button type="button" data-tooltip-target="tooltip-account"
+                    <button type="button" data-tooltip-target="tooltip-account" data-modal-target="popup-manage-member"
+                        data-modal-toggle="popup-manage-member"
                         class="text-white mx-3 bg-gray-50 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center dark:bg-cyan-900 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
                         <svg class="w-5 h-5 fill-cyan-600 dark:fill-cyan-400" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 -960 960 960">
@@ -460,7 +461,8 @@
                                 d="M400-480q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM80-160v-112q0-33 17-62t47-44q51-26 115-44t141-18h14q6 0 12 2-8 18-13.5 37.5T404-360h-4q-71 0-127.5 18T180-306q-9 5-14.5 14t-5.5 20v32h252q6 21 16 41.5t22 38.5H80Zm560 40-12-60q-12-5-22.5-10.5T584-204l-58 18-40-68 46-40q-2-14-2-26t2-26l-46-40 40-68 58 18q11-8 21.5-13.5T628-460l12-60h80l12 60q12 5 22.5 11t21.5 15l58-20 40 70-46 40q2 12 2 25t-2 25l46 40-40 68-58-18q-11 8-21.5 13.5T732-180l-12 60h-80Zm40-120q33 0 56.5-23.5T760-320q0-33-23.5-56.5T680-400q-33 0-56.5 23.5T600-320q0 33 23.5 56.5T680-240ZM400-560q33 0 56.5-23.5T480-640q0-33-23.5-56.5T400-720q-33 0-56.5 23.5T320-640q0 33 23.5 56.5T400-560Zm0-80Zm12 400Z" />
                         </svg>
                     </button>
-                    <button type="button" data-tooltip-target="tooltip-folder"
+                    <button type="button" data-tooltip-target="tooltip-folder" data-modal-target="popup-setting"
+                        data-modal-toggle="popup-setting"
                         class="text-white bg-gray-50 hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-xs px-3 py-2 text-center inline-flex items-center dark:bg-cyan-900 dark:hover:bg-cyan-700 dark:focus:ring-cyan-800">
                         <svg class="w-5 h-5 fill-cyan-600 dark:fill-cyan-400" xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 -960 960 960">
@@ -505,6 +507,187 @@
                         </div>
                     </div>
 
+                    <div id="popup-manage-member" tabindex="-1"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-md max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                        Manage Member
+                                    </h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                        data-modal-hide="popup-manage-member">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <form class="p-4 md:p-5">
+                                    <div class="grid gap-4 mb-4 grid-cols-2">
+                                        <div class="col-span-2">
+                                            <label for="category"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Add
+                                                Member</label>
+                                            <select id="category"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                <option selected="">Open this select menu</option>
+                                                <option value="User One">User One</option>
+                                                <option value="User Two">User Two</option>
+                                                <option value="User Three">User Three</option>
+                                                <option value="User Four">User Four</option>
+                                                <option value="User Five">User Five</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="col-span-2">
+                                            <hr class="mb-3" />
+                                            <div id="addedDivsContainer">
+                                                <div class="flex justify-between">
+                                                    <div class="inline-block">
+                                                        <p class="text-sm dark:text-white">User One</p>
+                                                        <p class="text-xs text-gray-400">Manager</p>
+                                                    </div>
+                                                    <div class="flex">
+                                                        <button type="button"
+                                                            class="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-xs px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900 h-full">
+                                                            Remove
+                                                        </button>
+
+                                                        <select id="countries"
+                                                            class="bg-gray-50 border border-gray-300 text-gray-900 text-xs rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                                                            <option selected>User Access</option>
+                                                            <option value="member">Member</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <button data-modal-hide="popup-manage-member" type="button"
+                                            class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                                            Cancel
+                                        </button>
+                                        <button type="submit"
+                                            class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            Update Member
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Popup Setting-->
+                    <div id="popup-setting" tabindex="-1"
+                        class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                        <div class="relative p-4 w-full max-w-md max-h-full">
+                            <!-- Modal content -->
+                            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                <!-- Modal header -->
+                                <div
+                                    class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                                        Edit Collaboration
+                                    </h3>
+                                    <button type="button"
+                                        class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                        data-modal-toggle="popup-setting">
+                                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 14 14">
+                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                                stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                        </svg>
+                                        <span class="sr-only">Close modal</span>
+                                    </button>
+                                </div>
+                                <!-- Modal body -->
+                                <form class="p-4 md:p-5">
+                                    <div class="grid gap-4 mb-4 grid-cols-2">
+                                        <div class="col-span-2">
+                                            <label for="name"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Title</label>
+                                            <input type="text" name="name" id="name"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
+                                                placeholder="Write a good title." required="" />
+                                        </div>
+                                        <div class="col-span-2">
+                                            <label for="description"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Description</label>
+                                            <textarea id="description" rows="4"
+                                                class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                placeholder="Describe your topic."></textarea>
+                                        </div>
+                                        <div class="col-span-2">
+                                            <label for="category"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                                            <select id="category"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                <option selected="">Open this select menu</option>
+                                                <option value="one">Category One</option>
+                                                <option value="two">Category Two</option>
+                                                <option value="three">Category Three</option>
+                                                <option value="four">Category Four</option>
+                                                <option value="five">Category Five</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-span-2">
+                                            <label for="category"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Approx.
+                                                End Date</label>
+                                            <div class="relative max-w-sm">
+                                                <div
+                                                    class="absolute inset-y-3 start-0 flex items-center ps-3.5 pointer-events-none">
+                                                    <svg class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                                                        fill="currentColor" viewBox="0 0 20 20">
+                                                        <path
+                                                            d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4ZM0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
+                                                    </svg>
+                                                </div>
+                                                <input datepicker type="text"
+                                                    class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full ps-10 p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                                    placeholder="Select date" />
+                                            </div>
+                                        </div>
+                                        <div class="col-span-2">
+                                            <label for="category"
+                                                class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Assign
+                                                Leader</label>
+                                            <select id="category"
+                                                class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                                <option selected="">Select category</option>
+                                                <option value="leaderone">Leader One</option>
+                                                <option value="leadertwo">Leader Two</option>
+                                                <option value="leaderthree">Leader Three</option>
+                                                <option value="leaderfour">Leader Four</option>
+                                                <option value="leaderfive">Leader Five</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <button data-modal-hide="popup-setting" type="button"
+                                            class="ms-3 text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-gray-200 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">
+                                            Cancel
+                                        </button>
+                                        <button type="submit"
+                                            class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                            Update Collaboration
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
                     <!-- Tooltip -->
                     <div id="tooltip-changestatus" role="tooltip"
                         class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
@@ -518,7 +701,7 @@
                     </div>
                     <div id="tooltip-account" role="tooltip"
                         class="absolute z-10 invisible inline-block px-3 py-2 text-xs font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
-                        Manage Account
+                        Manage Member
                         <div class="tooltip-arrow" data-popper-arrow></div>
                     </div>
 
@@ -561,15 +744,356 @@
                             aliquam non culpa iste error molestias voluptate natus sapiente beatae corporis.</p>
                     </div>
                     <!-- Files -->
-                    <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700 ">
-                        <div class="flex">
-                            <h1 class="text-md uppercase tracking-wide font-bold mb-2 text-gray-900 dark:text-gray-300">
+                    <div class="p-4 rounded-lg bg-gray-50 dark:bg-gray-700">
+                        <div class="flex justify-between mb-5">
+                            <h1
+                                class="text-xs uppercase tracking-wide font-bold mb-2 text-gray-900 dark:text-gray-300 my-auto">
                                 Documents & Files
                             </h1>
+                            <div class="relative">
+                                <div
+                                    class="absolute inset-y-0 left-0 rtl:inset-r-0 rtl:right-0 flex items-center ps-3 pointer-events-none">
+                                    <svg class="w-5 h-5 text-gray-500 dark:text-gray-400" aria-hidden="true"
+                                        fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </div>
+                                <input type="text" id="table-search"
+                                    class="block p-2 ps-10 text-xs text-gray-900 border border-gray-300 rounded-lg w-60 bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                    placeholder="Search document">
+                            </div>
                         </div>
-                        <div class="border bg-gray-900 h-40">
+                        <div class="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 gap-4">
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option-1">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option-1"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option-2">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option-2"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option-3">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option-3"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option-4">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option-4"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option-5" d>
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option-5"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option-6">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option-6"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
+
+                            <div class="border border-gray-300 rounded-xl p-5 inline-block">
+                                <div class="flex justify-between">
+                                    <div>
+                                        <svg class="w-8 h-8 text-indigo-800 dark:text-indigo-300 bg-indigo-400 dark:bg-indigo-800 border border-indigo-400 rounded-xl p-1 mb-5"
+                                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                            viewBox="0 0 24 24">
+                                            <path fill-rule="evenodd"
+                                                d="M9 2.2V7H4.2l.4-.5 3.9-4 .5-.3Zm2-.2v5a2 2 0 0 1-2 2H4v11c0 1.1.9 2 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2h-7ZM8 16c0-.6.4-1 1-1h6a1 1 0 1 1 0 2H9a1 1 0 0 1-1-1Zm1-5a1 1 0 1 0 0 2h6a1 1 0 1 0 0-2H9Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                    </div>
+                                    <div class="relative">
+                                        <button type="button" data-dropdown-toggle="tooltip-document-option-7">
+                                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                                xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                                <path stroke="currentColor" stroke-linecap="round" stroke-width="2"
+                                                    d="M12 6h0m0 6h0m0 6h0" />
+                                            </svg>
+                                        </button>
+                                        <div id="tooltip-document-option-7"
+                                            class="hidden z-10 shadow-lg right-0 top-30 text-xs bg-gray-100 px-4 py-2 rounded-sm dark:bg-gray-800 dark:text-white">
+                                            <ul>
+                                                <li><a href="#" class="hover:text-blue-500">Download</a></li>
+                                                <li class="py-2">
+                                                    <hr>
+                                                </li>
+                                                <li class="hover:text-blue-500"><a href="#">Go thread</a></li>
+                                            </ul>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-sm font-semibold dark:text-white">Brand Identity.pdf</p>
+                                <p class="text-xs text-gray-400">28 MB</p>
+                            </div>
 
                         </div>
+
+                        <nav class="flex items-center flex-column flex-wrap md:flex-row justify-between pt-4"
+                            aria-label="Table navigation">
+                            <span
+                                class="text-sm font-normal text-gray-500 dark:text-gray-400 mb-4 md:mb-0 block w-full md:inline md:w-auto">Showing
+                                <span class="font-semibold text-gray-900 dark:text-white">1-10</span> of <span
+                                    class="font-semibold text-gray-900 dark:text-white">1000</span></span>
+                            <ul class="inline-flex -space-x-px rtl:space-x-reverse text-sm h-8">
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 ms-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-s-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Previous</a>
+                                </li>
+                                <li>
+                                    <a href="#" aria-current="page"
+                                        class="flex items-center justify-center px-3 h-8 text-blue-600 border border-gray-300 bg-blue-50 hover:bg-blue-100 hover:text-blue-700 dark:border-gray-700 dark:bg-gray-700 dark:text-white">1</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">2</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">3</a>
+
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">4</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">5</a>
+                                </li>
+                                <li>
+                                    <a href="#"
+                                        class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-e-lg hover:bg-gray-100 hover:text-gray-700 dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white">Next</a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
                 <div class="flex-initial w-auto rounded-lg">
