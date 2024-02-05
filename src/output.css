@@ -2834,17 +2834,15 @@ input:checked + .toggle-bg {
 
 :is(.dark .dark\:border-transparent) {
   border-color: transparent;
+
 }
 
 :is(.dark .dark\:bg-blue-600) {
   --tw-bg-opacity: 1;
   background-color: rgb(28 100 242 / var(--tw-bg-opacity));
+
 }
 
-:is(.dark .dark\:bg-cyan-900) {
-  --tw-bg-opacity: 1;
-  background-color: rgb(22 78 99 / var(--tw-bg-opacity));
-}
 
 :is(.dark .dark\:bg-gray-500) {
   --tw-bg-opacity: 1;
@@ -2909,9 +2907,18 @@ input:checked + .toggle-bg {
   background-color: rgb(119 29 29 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:fill-cyan-400) {
-  fill: #22d3ee;
+
+:is(.dark .dark\:bg-indigo-800) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(66 56 157 / var(--tw-bg-opacity));
 }
+
+:is(.dark .dark\:bg-blue-700) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(26 86 219 / var(--tw-bg-opacity));
+}
+
+
 
 :is(.dark .dark\:fill-gray-400) {
   fill: #9CA3AF;
@@ -3039,9 +3046,21 @@ input:checked + .toggle-bg {
   background-color: rgb(200 30 30 / var(--tw-bg-opacity));
 }
 
-:is(.dark .dark\:hover\:fill-white:hover) {
-  fill: #ffffff;
+:is(.dark .dark\:hover\:bg-indigo-800:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(66 56 157 / var(--tw-bg-opacity));
 }
+
+:is(.dark .dark\:hover\:bg-green-800:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(3 84 63 / var(--tw-bg-opacity));
+}
+
+:is(.dark .dark\:hover\:bg-blue-800:hover) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(30 66 159 / var(--tw-bg-opacity));
+}
+
 
 :is(.dark .dark\:hover\:text-blue-500:hover) {
   --tw-text-opacity: 1;
