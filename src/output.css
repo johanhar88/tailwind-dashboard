@@ -2692,6 +2692,11 @@ input:checked + .toggle-bg {
   color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
+.hover\:text-teal-600:hover {
+  --tw-text-opacity: 1;
+  color: rgb(4 116 129 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover {
   text-decoration-line: underline;
 }
@@ -3061,6 +3066,11 @@ input:checked + .toggle-bg {
 :is(.dark .dark\:hover\:text-red-500:hover) {
   --tw-text-opacity: 1;
   color: rgb(240 82 82 / var(--tw-text-opacity));
+}
+
+:is(.dark .dark\:hover\:text-teal-400:hover) {
+  --tw-text-opacity: 1;
+  color: rgb(22 189 202 / var(--tw-text-opacity));
 }
 
 :is(.dark .dark\:hover\:text-white:hover) {
