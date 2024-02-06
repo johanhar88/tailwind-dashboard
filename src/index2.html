@@ -435,7 +435,7 @@
                 <p>Created at 22 January 2024 5:02 PM</p>
                 <div class="flex justify-end">
                     <p class="italic font-semibold">PSS/000001</p>
-                    <button class="cursor-pointer ms-1" data-tooltip-target="tooltip-click-copy" data-tooltip-trigger="click">
+                    <button class="cursor-pointer ms-1" id="copied" data-tooltip-target="tooltip-click-copy" data-tooltip-trigger="click">
                         <svg class="w-4 h-4 text-gray-800 hover:text-teal-600 dark:text-white dark:hover:text-teal-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M9 8v3c0 .6-.4 1-1 1H5m11 4h2c.6 0 1-.4 1-1V5c0-.6-.4-1-1-1h-7a1 1 0 0 0-1 1v1m4 3v10c0 .6-.4 1-1 1H6a1 1 0 0 1-1-1v-7.1c0-.3 0-.5.2-.7l2.5-2.9c.2-.2.5-.3.8-.3H13c.6 0 1 .4 1 1Z"/>
                           </svg>
@@ -733,17 +733,19 @@
                 <li class="me-2" role="presentation">
                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
                         data-tabs-target="#overview" type="button" role="tab" aria-controls="overview"
-                        aria-selected="">Overview</button>
+                        aria-selected="false">Overview</button>
                 </li>
                 <li class="me-2" role="presentation">
                     <button
                         class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                         id="thread-tab" data-tabs-target="#thread" type="button" role="tab" aria-controls="thread"
-                        aria-selected="">Thread</button>
+                        aria-selected="false">Thread</button>
                 </li>
             </ul>
         </div>
+        
         <div id="default-tab-content">
+            <!-- Overview -->
             <div class="flex gap-4" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                 <div class="rounded-lg flex-1">
                     <!-- Summary -->
@@ -782,7 +784,7 @@
                         </div>
                         <div class="grid xl:grid-cols-4 lg:grid-cols-4 md:grid-cols-2 gap-4">
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -820,7 +822,7 @@
                             </div>
 
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -858,7 +860,7 @@
                             </div>
 
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -896,7 +898,7 @@
                             </div>
 
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -934,7 +936,7 @@
                             </div>
 
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -972,7 +974,7 @@
                             </div>
 
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -1010,7 +1012,7 @@
                             </div>
 
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -1048,7 +1050,7 @@
                             </div>
 
                             <div
-                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-cyan-900 dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
+                                class="border bg-white hover:bg-gray-50 hover:border-gray-400 cursor-pointer transition duration-500 border-gray-300 rounded-xl p-5 inline-block dark:bg-gray-800 dark:border-gray-800 dark:hover:bg-gray-900">
                                 <div class="flex justify-between">
                                     <div>
                                         <svg class="w-8 h-8 text-indigo-800 dark:text-cyan-400 bg-indigo-400 dark:bg-cyan-900 border border-indigo-400 rounded-xl p-1 mb-5 dark:border-none"
@@ -1259,6 +1261,8 @@
                     </div>
                 </div>
             </div>
+            
+            <!-- Thread -->
             <div class="hidden rounded-lg border-gray-200 dark:border-gray-700" id="thread" role="tabpanel"
                 aria-labelledby="thread-tab">
                 <!--Thread Section-->
@@ -1695,6 +1699,9 @@
         </div>
     </footer>
 
+    <!-- Flowbite JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+
     <!-- JS -->
     <script src="td-dashboard.js"></script>
 
@@ -1713,8 +1720,6 @@
     </script>
 
 
-    <!-- Flowbite JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 
     <!--CKEditor JS-->
     <script>
