@@ -2121,6 +2121,11 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-blue-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(63 131 248 / var(--tw-bg-opacity));
+}
+
 .fill-cyan-600 {
   fill: #0891b2;
 }
@@ -2135,6 +2140,10 @@ input:checked + .toggle-bg {
 
 .fill-white {
   fill: #ffffff;
+}
+
+.fill-current {
+  fill: currentColor;
 }
 
 .object-cover {
@@ -2658,8 +2667,17 @@ input:checked + .toggle-bg {
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.hover\:bg-red-500:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(240 82 82 / var(--tw-bg-opacity));
+}
+
 .hover\:fill-gray-900:hover {
   fill: #111827;
+}
+
+.hover\:fill-blue-500:hover {
+  fill: #3F83F8;
 }
 
 .hover\:text-blue-500:hover {
