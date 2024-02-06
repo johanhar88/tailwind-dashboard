@@ -9,6 +9,9 @@
     <!-- CkEditor Script-->
     <script src="../ckeditor5/build/ckeditor.js"></script>
 
+    <!-- Custom JS -->
+    <script src="td-dashboard.js"></script>
+
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
@@ -728,7 +731,7 @@
             <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400" id="default-tab"
                 data-tabs-toggle="#default-tab-content" role="tablist">
                 <li class="me-2" role="presentation">
-                    <button class="inline-block p-4 border-b-2 rounded-t-lg " id="profile-tab"
+                    <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
                         data-tabs-target="#overview" type="button" role="tab" aria-controls="overview"
                         aria-selected="false">Overview</button>
                 </li>
@@ -740,7 +743,6 @@
                 </li>
             </ul>
         </div>
-
         <div id="default-tab-content">
             <div class="flex gap-4" id="overview" role="tabpanel" aria-labelledby="overview-tab">
                 <div class="rounded-lg flex-1">
@@ -1256,11 +1258,9 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="hidden rounded-lg border-gray-200 dark:border-gray-700" id="thread" role="tabpanel"
                 aria-labelledby="thread-tab">
-
                 <!--Thread Section-->
                 <div class="mb-12 px-2">
                     <!-- User 1 -->
@@ -1641,8 +1641,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <!-- Post Reply Section-->
                 <div class=" border-gray-200 p-5 dark:border-gray-700 rounded-xl">
                     <div id="quote"
