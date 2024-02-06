@@ -587,8 +587,7 @@
                             Shana Cruz
                         </td>
                         <td class="px-6 py-4">
-                            <a href="index2.html" id="drill-thread" type="button"
-                                class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
+                            <button type="button" id="clickTrigger" class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
                                 <div class="flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
                                         viewBox="0 0 24 24">
@@ -599,9 +598,9 @@
                                             d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
                                             clip-rule="evenodd" />
                                     </svg>
-                                    <span>3</span>
+                                    <span>30</span>
                                 </div>
-                            </a>
+                            </button>
                         </td>
                         <td class="px-6 py-4">
                             <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
@@ -653,7 +652,7 @@
                             Shana Cruz
                         </td>
                         <td class="px-6 py-4">
-                            <a href="index2.html" type="button" class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
+                            <button id="clickTrigger" type="button" class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
                                 <div class="flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
                                         viewBox="0 0 24 24">
@@ -666,7 +665,7 @@
                                     </svg>
                                     <span>3</span>
                                 </div>
-                            </a>
+                            </button>
                         </td>
                         <td class="px-6 py-4">
                             <!-- Modal Toggle -->
@@ -716,7 +715,7 @@
                             Shana Cruz
                         </td>
                         <td class="px-6 py-4">
-                            <a href="index2.html" type="button" class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
+                            <button id="clickTrigger" type="button" class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
                                 <div class="flex">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
                                         viewBox="0 0 24 24">
@@ -729,7 +728,7 @@
                                     </svg>
                                     <span>3</span>
                                 </div>
-                            </a>
+                            </button>
                         </td>
                         <td class="px-6 py-4">
                             <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
@@ -1108,6 +1107,16 @@
 
     <!-- Datepicker Flowbite JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('#clickTrigger').click(function () {
+                localStorage.setItem('buttonClicked', 'true');
+                window.location.href = "index2.html";
+            });
+        });
+    </script>
+
 </body>
 
 </html>
