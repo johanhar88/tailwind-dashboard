@@ -9,8 +9,8 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-    <!-- Custom JS -->
-    <script src="td-dashboard.js"></script>
+    <!-- JQ & Custom JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Tailwind Output CSS -->
     <link rel="stylesheet" href="./output.css">
@@ -587,20 +587,21 @@
                             Shana Cruz
                         </td>
                         <td class="px-6 py-4">
-                            <a href="index2.html" target="_blank" type="button" class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
-                                <div class="flex">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
-                                        viewBox="0 0 24 24">
-                                        <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                            d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
-                                            clip-rule="evenodd" />
-                                        <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                            d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                    <span>3</span>
-                                </div>
-                            </a>
+                                <a href="index2.html"  id="drill-thread" type="button"
+                                    class="px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
+                                    <div class="flex">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
+                                            viewBox="0 0 24 24">
+                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
+                                                clip-rule="evenodd" />
+                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
+                                                clip-rule="evenodd" />
+                                        </svg>
+                                        <span>3</span>
+                                    </div>
+                                </a>
                         </td>
                         <td class="px-6 py-4">
                             <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
@@ -614,7 +615,8 @@
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <td scope="row"
                             class="w-1/4 px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank">Analytics
+                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                                target="_blank">Analytics
                                 UI Finalization 2</a>
                             <div class="text-xs mt-1 text-gray-600 dark:text-gray-500"><span>PSS/000002</span><span
                                     class="mx-1">•</span>Google</div>
@@ -678,7 +680,8 @@
                     <tr
                         class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                         <td scope="row" class="w-1/4 px-6 py-4 font-medium text-gray-900 dark:text-white">
-                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline" target="_blank">Analytics
+                            <a href="#" class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+                                target="_blank">Analytics
                                 UI Finalization 3</a>
                             <div class="text-xs mt-1 text-gray-600 dark:text-gray-500"><span>PSS/000003</span><span
                                     class="mx-1">•</span>Google</div>
@@ -1069,22 +1072,14 @@
         </div>
     </footer>
 
-    <!-- Dark Mode -->
-    <script>
-        const switcher = document.querySelector('#theme-toggle')
-        const html = document.querySelector('html')
-
-        switcher.addEventListener('click', function () {
-            switcher.checked ? html.classList.add('dark') : html.classList.remove('dark')
-        })
-    </script>
+    <!-- JS -->
+    <script src="td-dashboard.js"></script>
 
     <!-- Flowbite JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 
     <!-- Datepicker Flowbite JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/datepicker.min.js"></script>
-
 </body>
 
 </html>

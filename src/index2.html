@@ -9,8 +9,8 @@
     <!-- CkEditor Script-->
     <script src="../ckeditor5/build/ckeditor.js"></script>
 
-    <!-- Custom JS -->
-    <script src="td-dashboard.js"></script>
+    <!-- JQ & Custom JS -->
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -733,13 +733,13 @@
                 <li class="me-2" role="presentation">
                     <button class="inline-block p-4 border-b-2 rounded-t-lg" id="profile-tab"
                         data-tabs-target="#overview" type="button" role="tab" aria-controls="overview"
-                        aria-selected="false">Overview</button>
+                        aria-selected="">Overview</button>
                 </li>
                 <li class="me-2" role="presentation">
                     <button
                         class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
                         id="thread-tab" data-tabs-target="#thread" type="button" role="tab" aria-controls="thread"
-                        aria-selected="false">Thread</button>
+                        aria-selected="">Thread</button>
                 </li>
             </ul>
         </div>
@@ -1695,30 +1695,8 @@
         </div>
     </footer>
 
-    <!-- Dark Mode -->
-    <script>
-        const switcher = document.querySelector('#theme-toggle')
-        const html = document.querySelector('html')
-
-        switcher.addEventListener('click', function () {
-            switcher.checked ? html.classList.add('dark') : html.classList.remove('dark')
-        })
-    </script>
-
-    <!-- Member Icon Tab JS-->
-    <script>
-        const profile = document.getElementById('profile-tab');
-        const overview = document.getElementById('thread-tab');
-        const icon = document.getElementById('member-icon');
-
-        profile.addEventListener('click', () => {
-            icon.classList.add('hidden');
-        })
-
-        overview.addEventListener('click', () => {
-            icon.classList.remove('hidden');
-        })
-    </script>
+    <!-- JS -->
+    <script src="td-dashboard.js"></script>
 
     <!-- HandleCLick JS-->
     <script>
