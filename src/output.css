@@ -1396,6 +1396,10 @@ input:checked + .toggle-bg {
   margin-inline-start: 0.75rem;
 }
 
+.ms-4 {
+  margin-inline-start: 1rem;
+}
+
 .ms-auto {
   margin-inline-start: auto;
 }
