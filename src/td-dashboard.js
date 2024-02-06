@@ -5,7 +5,6 @@ const html = document.querySelector('html')
 switcher.addEventListener('click', function () {
     switcher.checked ? html.classList.add('dark') : html.classList.remove('dark')
 })
-// END
 
 // Tab
 const btnConvo = document.getElementById('drill-thread')
@@ -32,3 +31,4 @@ $(function () {
 //         localStorage.removeItem('buttonClicked');
 //     }
 // }
+
