@@ -17,3 +17,18 @@ $(function () {
         $(overview).prop('aria-selected',true);
     });
 });
+
+// function clickTrigger() {
+//     localStorage.setItem('buttonClicked', 'true');
+//     window.location.href = 'index2.html';
+// }
+
+// window.onload = function () {
+//     var buttonClicked = localStorage.getItem('buttonClicked');
+//     if (buttonClicked === 'true') {
+//         var button = document.getElementById('thread-tab');
+//         button.click();
+//         console.log(buttonClicked);
+//         localStorage.removeItem('buttonClicked');
+//     }
+// }
