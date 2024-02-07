@@ -747,7 +747,7 @@
                 </li>
             </ul>
         </div>
-        
+
         <div id="default-tab-content">
             <!-- Overview -->
             <div class="flex gap-4" id="overview" role="tabpanel" aria-labelledby="overview-tab">
@@ -1265,7 +1265,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Thread -->
             <div class="hidden rounded-lg border-gray-200 dark:border-gray-700" id="thread" role="tabpanel"
                 aria-labelledby="thread-tab">
@@ -1735,12 +1735,11 @@
     </script>
 
     <script>
+        var params = new window.URLSearchParams(window.location.search);
         window.onload = function () {
-            var buttonClicked = localStorage.getItem('buttonClicked');
-            if (buttonClicked === 'true') {
+            if (params != 0) {
                 const tabThread = FlowbiteInstances.getInstance('Tabs', 'default-tab');
-                tabThread.show('#thread');
-                localStorage.removeItem('buttonClicked');
+                tabThread.show('#' + params.get('activeTab'));
             }
         }
     </script>
@@ -1755,7 +1754,6 @@
             }
         });
     </script> -->
-
 
 
 </body>
