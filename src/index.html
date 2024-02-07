@@ -67,7 +67,7 @@
                         </li>
                         <li>
                             <a href="#"
-                                class="btn-navbar btn-navbar-transition text-cyan-500 dark:bg-gray-700 dark:text-cyan-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Activity</a>
+                                class="btn-navbar btn-navbar-transition text-cyan-500 dark:bg-gray-700 dark:text-cyan-400 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">Spaces</a>
                         </li>
                         <li>
                             <a href="#" class="btn-navbar btn-navbar-transition group">Messages</a>
@@ -418,12 +418,12 @@
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="m1 9 4-4-4-4" />
                         </svg>
-                        <span class="ms-1 text-xs font-medium text-gray-500 md:ms-2 dark:text-gray-400">Activity</span>
+                        <span class="ms-1 text-xs font-medium text-gray-500 md:ms-2 dark:text-gray-400">Spaces</span>
                     </div>
                 </li>
             </ol>
         </nav>
-        <h2 class="py-3 text-3xl font-semibold text-gray-900 dark:text-white">My Activities</h2>
+        <h2 class="py-3 text-3xl font-semibold text-gray-900 dark:text-white">My Spaces</h2>
         <hr class="h-px mt-3 mb-2 w-full bg-gray-200 border-0 dark:bg-gray-700">
     </div>
     <div class="mx-7">
@@ -508,7 +508,7 @@
             <div class="overflow-hidden my-3">
                 <table class="w-full text-xs table-fixed text-left rtl:text-right text-gray-500 dark:text-gray-400">
                     <thead
-                        class="text-[10px] tracking-wide text-gray-600 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                        class="text-[10px] tracking-wide text-gray-500 uppercase bg-white border-b dark:border-gray-700 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
                             <th scope="col" class="px-6 py-3 w-1/4">
                                 Title
@@ -557,9 +557,17 @@
                                 <div class="text-xs mt-1 text-gray-600 dark:text-gray-500"><span>PSS/000001</span><span
                                         class="mx-1">•</span>Google</div>
                             </td>
-                            <td class="px-6 py-4">
-                                <span
-                                    class="bg-green-100 text-green-800 font-xs font-semibold px-3 py-1 rounded-lg dark:bg-green-900 dark:text-green-300">OPEN</span>
+                            <td class="px-4 py-3">
+                                <div
+                                    class="flex px-2 py-1.5 items-center justify-center bg-green-100 text-green-800 rounded-full dark:bg-green-900 dark:text-green-300">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white stroke-green-800 dark:stroke-green-300"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <span class="ms-1 font-normal">Open</span>
+                                </div>
                             </td>
                             <td class="px-6 py-4">
                                 <button type="button" data-modal-target="popup-member-list"
@@ -588,21 +596,23 @@
                             <td class="px-6 py-4">
                                 Shana Cruz
                             </td>
-                            <td class="px-6 py-4">
-                                <a href="index2.html?activeTab=thread" target="_blank">
-                                    <div class="px-2 py-1.5 flex hover:bg-gray-200 rounded-lg">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
-                                            viewBox="0 0 24 24" class="ms-1">
-                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                                d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
-                                                clip-rule="evenodd" />
-                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                                d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        <span>30</span>
-                                    </div>
-                                </a>
+                            <td class="px-auto py-4">
+                                <div class="flex">
+                                    <a href="index2.html?activeTab=thread" target="_blank">
+                                        <div class="px-2 py-1.5 flex hover:bg-gray-200 rounded-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
+                                                viewBox="0 0 24 24" class="ms-1">
+                                                <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                    d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
+                                                    clip-rule="evenodd" />
+                                                <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                    d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="mx-1">300</span>
+                                        </div>
+                                    </a>
+                                </div>
                             </td>
                             <td class="px-6 py-4">
                                 <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
@@ -623,9 +633,17 @@
                                 <div class="text-xs mt-1 text-gray-600 dark:text-gray-500"><span>PSS/000002</span><span
                                         class="mx-1">•</span>Google</div>
                             </td>
-                            <td class="px-6 py-4">
-                                <span
-                                    class="bg-green-100 text-green-800 font-xs font-semibold px-3 py-1 rounded-lg dark:bg-green-900 dark:text-green-300">OPEN</span>
+                            <td class="px-4 py-3">
+                                <div
+                                    class="flex px-2 py-1.5 items-center justify-center bg-green-100 text-green-800 rounded-full dark:bg-green-900 dark:text-green-300">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white stroke-green-800 dark:stroke-green-300"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <span class="ms-1 font-normal">Open</span>
+                                </div>
                             </td>
                             <td class="px-6 py-4">
                                 <button type="button" data-modal-target="popup-member-list"
@@ -654,21 +672,23 @@
                             <td class="px-6 py-4">
                                 Shana Cruz
                             </td>
-                            <td class="px-6 py-4">
-                                <a href="index2.html?activeTab=thread" target="_blank">
-                                    <div class=" flex px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
-                                            viewBox="0 0 24 24" class="ms-1">
-                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                                d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
-                                                clip-rule="evenodd" />
-                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                                d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        <span>3</span>
-                                    </div>
-                                </a>
+                            <td class="px-auto py-4">
+                                <div class="flex">
+                                    <a href="index2.html?activeTab=thread" target="_blank">
+                                        <div class=" flex px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
+                                                viewBox="0 0 24 24" class="ms-1">
+                                                <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                    d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
+                                                    clip-rule="evenodd" />
+                                                <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                    d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="mx-1">3</span>
+                                        </div>
+                                    </a>
+                                </div>
                             </td>
                             <td class="px-6 py-4">
                                 <!-- Modal Toggle -->
@@ -689,9 +709,17 @@
                                 <div class="text-xs mt-1 text-gray-600 dark:text-gray-500"><span>PSS/000003</span><span
                                         class="mx-1">•</span>Google</div>
                             </td>
-                            <td class="px-6 py-4">
-                                <span
-                                    class="bg-red-100 text-red-800 font-xs font-semibold px-3 py-1 rounded-lg dark:bg-red-900 dark:text-red-300">CLOSE</span>
+                            <td class="px-4 py-3">
+                                <div
+                                    class="flex px-2 py-1.5 items-center justify-center bg-red-100 text-red-800 rounded-full dark:bg-red-900 dark:text-red-300">
+                                    <svg class="w-4 h-4 text-gray-800 dark:text-white stroke-red-800 dark:stroke-red-300"
+                                        aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                        viewBox="0 0 24 24">
+                                        <path stroke="" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="m15 9-6 6m0-6 6 6m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                                    </svg>
+                                    <span class="ms-1 font-normal">Close</span>
+                                </div>
                             </td>
                             <td class="px-6 py-4">
                                 <button type="button" data-modal-target="popup-member-list"
@@ -718,21 +746,23 @@
                             <td class="px-6 py-4">
                                 Shana Cruz
                             </td>
-                            <td class="px-6 py-4">
-                                <a href="index2.html?activeTab=thread" target="_blank">
-                                    <div class="flex px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
-                                            viewBox="0 0 24 24" class="ms-1">
-                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                                d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
-                                                clip-rule="evenodd" />
-                                            <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
-                                                d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
-                                                clip-rule="evenodd" />
-                                        </svg>
-                                        <span>3</span>
-                                    </div>
-                                </a>
+                            <td class="px-auto py-4">
+                                <div class="flex">
+                                    <a href="index2.html?activeTab=thread" target="_blank">
+                                        <div class="flex px-2.5 py-1.5 hover:bg-gray-200 rounded-lg">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none"
+                                                viewBox="0 0 24 24" class="ms-1">
+                                                <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                    d="M4 3a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h1v2a1 1 0 0 0 1.707.707L9.414 13H15a1 1 0 0 0 1-1V4a1 1 0 0 0-1-1H4Z"
+                                                    clip-rule="evenodd" />
+                                                <path fill="#4B5563" fill-rule="evenodd" class="dark:fill-white"
+                                                    d="M8.023 17.215c.033-.03.066-.062.098-.094L10.243 15H15a3 3 0 0 0 3-3V8h2a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1h-1v2a1 1 0 0 1-1.707.707L14.586 18H9a1 1 0 0 1-.977-.785Z"
+                                                    clip-rule="evenodd" />
+                                            </svg>
+                                            <span class="mx-1">3</span>
+                                        </div>
+                                    </a>
+                                </div>
                             </td>
                             <td class="px-6 py-4">
                                 <button data-modal-target="crud-modal" data-modal-toggle="crud-modal"
