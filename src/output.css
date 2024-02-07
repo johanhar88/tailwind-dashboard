@@ -2161,6 +2161,14 @@ input:checked + .toggle-bg {
   fill: #ffffff;
 }
 
+.stroke-green-800 {
+  stroke: #03543F;
+}
+
+.stroke-red-800 {
+  stroke: #9B1C1C;
+}
+
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -2192,11 +2200,6 @@ input:checked + .toggle-bg {
 
 .p-5 {
   padding: 1.25rem;
-}
-
-.px-1 {
-  padding-left: 0.25rem;
-  padding-right: 0.25rem;
 }
 
 .px-2 {
@@ -2272,6 +2275,11 @@ input:checked + .toggle-bg {
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.px-1 {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
 }
 
 .pb-2 {
@@ -2377,6 +2385,10 @@ input:checked + .toggle-bg {
 
 .font-semibold {
   font-weight: 600;
+}
+
+.font-thin {
+  font-weight: 100;
 }
 
 .uppercase {
@@ -2485,6 +2497,11 @@ input:checked + .toggle-bg {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-gray-100 {
+  --tw-text-opacity: 1;
+  color: rgb(243 244 246 / var(--tw-text-opacity));
 }
 
 .antialiased {
@@ -2879,6 +2896,11 @@ input:checked + .toggle-bg {
   border-color: transparent;
 }
 
+:is(.dark .dark\:border-gray-400) {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
 :is(.dark .dark\:bg-blue-600) {
   --tw-bg-opacity: 1;
   background-color: rgb(28 100 242 / var(--tw-bg-opacity));
@@ -2962,6 +2984,14 @@ input:checked + .toggle-bg {
 
 :is(.dark .dark\:fill-white) {
   fill: #ffffff;
+}
+
+:is(.dark .dark\:stroke-green-300) {
+  stroke: #84E1BC;
+}
+
+:is(.dark .dark\:stroke-red-300) {
+  stroke: #F8B4B4;
 }
 
 :is(.dark .dark\:stroke-white) {
